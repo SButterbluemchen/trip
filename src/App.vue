@@ -1,7 +1,7 @@
 <script setup>
 import GeneralInformation from './components/GeneralInformation.vue'
 import PageTitle from './components/PageTitle.vue'
-import Planning from './components/Planning.vue'
+import PlanningOverview from './components/PlanningOverview.vue'
 </script>
 
 <template>
@@ -10,7 +10,7 @@ import Planning from './components/Planning.vue'
   </header>
   <main>
     <GeneralInformation />
-    <Planning />
+    <PlanningOverview />
   </main>
 </template>
 
