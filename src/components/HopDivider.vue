@@ -2,7 +2,7 @@
 
 <template>
   <div class="hop-divider">
-    <img alt="Hop" src="@/assets/images/hops.png" width="47" height="45" />
+    <img alt="Hop" src="@/assets/images/hops.png" width="45" height="45" />
     <img alt="Hop" src="@/assets/images/hops.png" width="45" height="45" />
     <img alt="Hop" src="@/assets/images/hops.png" width="45" height="45" />
   </div>
