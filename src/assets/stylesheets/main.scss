@@ -1,0 +1,11 @@
+@import './base.scss';
+@import './typography';
+@import './mixins';
+@import './layout';
+
+#app {
+  margin: 0;
+  padding: 2rem;
+
+  font-weight: normal;
+}
