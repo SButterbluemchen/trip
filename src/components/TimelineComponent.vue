@@ -1,81 +1,64 @@
+<script setup>
+import Timeline from 'primevue/timeline'
+
+// eslint-disable-next-line no-unused-vars
+const props = defineProps({
+  events: Array
+})
+</script>
+
 <template>
-  <div class="card">
-    <Timeline :value="events" align="alternate" class="customized-timeline">
+  <div class="timeline-component">
+    <h3>
+      <slot name="dayHeading"></slot>
+    </h3>
+    <Timeline :value="events" class="customized-timeline">
+      <template #opposite="slotProps">
+        <small class="p-text-secondary">{{ slotProps.item.time }}</small>
+      </template>
       <template #marker="slotProps">
-        <span
-          class="flex w-2rem h-2rem align-items-center justify-content-center text-white border-circle z-1 shadow-1"
-          :style="{ backgroundColor: slotProps.item.color }"
-        >
-          <i :class="slotProps.item.icon"></i>
+        <span class="icon" :style="{ backgroundColor: slotProps.item.color }">
+          <i v-if="slotProps.item.icon" :class="slotProps.item.icon"></i>
+          <font-awesome-icon v-else :icon="slotProps.item.secondaryIcon" />
         </span>
       </template>
       <template #content="slotProps">
-        <Card>
-          <template #title>
-            {{ slotProps.item.status }}
-          </template>
-          <template #subtitle>
-            {{ slotProps.item.date }}
-          </template>
-          <template #content>
-            <img
-              v-if="slotProps.item.image"
-              :src="`https://primefaces.org/cdn/primevue/images/product/${slotProps.item.image}`"
-              :alt="slotProps.item.name"
-              width="200"
-              class="shadow-1"
-            />
-            <p>
-              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Inventore sed consequuntur
-              error repudiandae numquam deserunt quisquam repellat libero asperiores earum nam
-              nobis, culpa ratione quam perferendis esse, cupiditate neque quas!
-            </p>
-            <Button label="Read more" text></Button>
-          </template>
-        </Card>
+        <p class="p-text-description">{{ slotProps.item.status }}</p>
       </template>
     </Timeline>
   </div>
 </template>
 
-<script setup>
-import { ref } from 'vue'
-import Timeline from 'primevue/timeline'
-import Card from 'primevue/card'
-import Button from 'primevue/button'
-
-const events = ref([
-  {
-    status: 'Ordered',
-    date: '15/10/2020 10:30',
-    icon: 'pi pi-shopping-cart',
-    color: '#9C27B0',
-    image: 'game-controller.jpg'
-  },
-  { status: 'Processing', date: '15/10/2020 14:00', icon: 'pi pi-cog', color: '#673AB7' },
-  { status: 'Shipped', date: '15/10/2020 16:15', icon: 'pi pi-shopping-cart', color: '#FF9800' },
-  { status: 'Delivered', date: '16/10/2020 10:00', icon: 'pi pi-check', color: '#607D8B' }
-])
-</script>
-
 <style lang="scss" scoped>
-@media screen and (max-width: 960px) {
-  ::v-deep(.customized-timeline) {
-    .p-timeline-event:nth-child(even) {
-      flex-direction: row !important;
+@import '@/assets/stylesheets/_variables.scss';
 
-      .p-timeline-event-content {
-        text-align: left !important;
-      }
-    }
+.timeline-component {
+  display: flex;
+  flex-direction: column;
+}
+.customized-timeline {
+  padding: 1rem;
+}
+h3 {
+  text-align: center;
+  background: $yellow-color;
+  padding: 0.25rem;
+  text-shadow: 1px 1px 10px black;
+}
+.icon {
+  padding: 0.5rem;
+  border-radius: 50%;
+  width: 2.5rem;
+  height: 2.5rem;
+  text-align: center;
+}
+.p-text-secondary {
+  color: white;
+}
 
-    .p-timeline-event-opposite {
-      flex: 0;
-    }
-
-    .p-card {
-      margin-top: 1rem;
-    }
-  }
+.p-text-description {
+  display: flex;
+  flex-wrap: wrap;
+  width: 6rem;
 }
 </style>
