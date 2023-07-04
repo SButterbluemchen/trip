@@ -1,9 +1,9 @@
 <script setup>
 import { ref } from 'vue'
+import { clothes, valuables, hygiene } from './constants/packingList.const'
+
 import SectionPage from './SectionPage.vue'
 import PackingListComponent from './PackingListComponent.vue'
-
-import { clothes, valuables, hygiene } from './constants/packingList.const'
 
 const sectionTitle = 'Packliste'
 

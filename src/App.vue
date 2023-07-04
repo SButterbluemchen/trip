@@ -3,6 +3,7 @@ import GeneralInformation from './components/GeneralInformation.vue'
 import PageTitle from './components/PageTitle.vue'
 import PlanningOverview from './components/PlanningOverview.vue'
 import PackingList from './components/PackingList.vue'
+import DictionaryList from './components/DictionaryList.vue'
 </script>
 
 <template>
@@ -13,6 +14,7 @@ import PackingList from './components/PackingList.vue'
     <GeneralInformation />
     <PlanningOverview />
     <PackingList />
+    <DictionaryList />
   </main>
 </template>
 
