@@ -2,6 +2,7 @@
 import GeneralInformation from './components/GeneralInformation.vue'
 import PageTitle from './components/PageTitle.vue'
 import PlanningOverview from './components/PlanningOverview.vue'
+import PackingList from './components/PackingList.vue'
 </script>
 
 <template>
@@ -11,6 +12,7 @@ import PlanningOverview from './components/PlanningOverview.vue'
   <main>
     <GeneralInformation />
     <PlanningOverview />
+    <PackingList />
   </main>
 </template>
 

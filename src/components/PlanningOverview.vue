@@ -8,7 +8,7 @@ import {
   secondDayEvents,
   thirdDayEvents,
   fourthDayEvents
-} from './helpers/planning.helpers'
+} from './constants/planning.const'
 
 const sectionTitle = 'Zeitplan'
 

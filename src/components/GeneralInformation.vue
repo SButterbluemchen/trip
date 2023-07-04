@@ -16,7 +16,7 @@ const generalInformation = ref([
   <SectionPage>
     <template #heading>{{ sectionTitle }}</template>
     <article>
-      <ul>
+      <ul class="general-information__list">
         <li v-for="information in generalInformation" :key="information.title">
           <h3>{{ information.title }}:</h3>
           <p>{{ information.text }}</p>
@@ -40,14 +40,11 @@ article {
     justify-content: space-evenly;
     gap: 2rem;
   }
-  li {
+  .general-information__list li {
     list-style-type: none;
     display: flex;
     align-items: center;
     gap: 0.5rem;
-    h3 {
-      font-weight: 500;
-    }
   }
 }
 figure {

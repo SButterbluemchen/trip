@@ -14,7 +14,7 @@ const props = defineProps({
     </h3>
     <Timeline :value="events" class="customized-timeline">
       <template #opposite="slotProps">
-        <small class="p-text-secondary">{{ slotProps.item.time }}</small>
+        <p class="p-text-secondary">{{ slotProps.item.time }}</p>
       </template>
       <template #marker="slotProps">
         <span class="icon" :style="{ backgroundColor: slotProps.item.color }">
