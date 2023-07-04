@@ -53,9 +53,9 @@ article {
   }
 }
 figure {
-  width: 20rem;
+  width: 19rem;
   @media only screen and (min-width: 900px) {
-    width: 30rem;
+    width: 35rem;
   }
   img {
     width: 100%;
