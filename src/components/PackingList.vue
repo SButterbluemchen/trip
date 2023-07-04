@@ -9,8 +9,8 @@ const sectionTitle = 'Packliste'
 
 const packingLists = ref([
   { list: clothes, heading: 'Kleidung' },
-  { list: valuables, heading: 'Unterlagen' },
-  { list: hygiene, heading: 'Hygiene' }
+  { list: hygiene, heading: 'Hygiene' },
+  { list: valuables, heading: 'Unterlagen' }
 ])
 </script>
 
@@ -31,8 +31,16 @@ const packingLists = ref([
   </SectionPage>
 </template>
 
-<style lang="scss">
+<style lang="scss" scoped>
 article {
   display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  gap: 1rem;
+  padding: 1rem;
+  @media only screen and (min-width: 900px) {
+    gap: 2rem;
+    justify-content: space-evenly;
+  }
 }
 </style>

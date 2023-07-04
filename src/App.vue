@@ -16,7 +16,7 @@ import PackingList from './components/PackingList.vue'
   </main>
 </template>
 
-<style lang="scss">
+<style lang="scss" scoped>
 header {
   line-height: 1.5;
   display: flex;

@@ -37,4 +37,10 @@ const eventList = ref([
   </SectionPage>
 </template>
 
-<style lang="scss"></style>
+<style lang="scss" scoped>
+article {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+}
+</style>

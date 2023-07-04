@@ -52,7 +52,7 @@ export const secondDayEvents = [
     color: '#E60244'
   },
   {
-    status: 'Brauereibesichtigung',
+    status: 'Besichtigung der Brauerei',
     time: '11:30 Uhr',
     icon: 'pi pi-camera',
     secondaryIcon: '',

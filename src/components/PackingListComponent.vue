@@ -18,10 +18,13 @@ const props = defineProps({
   </div>
 </template>
 
-<style lang="scss">
+<style lang="scss" scoped>
 .packingList-component {
   display: flex;
   flex-direction: column;
+  @media only screen and (min-width: 900px) {
+    max-width: 33%;
+  }
   h3 {
     font-size: 1.25rem;
   }

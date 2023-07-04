@@ -4,11 +4,15 @@ import SectionPage from './SectionPage.vue'
 
 const sectionTitle = 'Allgemeine Informationen'
 
-// fetch API https://restcountries.com/v3.1/alpha/cz
 const generalInformation = ref([
   { title: 'Land', text: 'Tschechien' },
   { title: 'Amtssprache', text: 'Tschechisch' },
-  { title: 'Hauptstadt', text: 'Prag' }
+  { title: 'Hauptstadt', text: 'Prag' },
+  { title: 'Währung', text: 'Tschechische Kronen (CZK)' },
+  { title: 'Wechselkurs', text: '1 € - 23,70 CZK' },
+  { title: 'Einwohnerzahl', text: '10,5 Millionen' },
+  { title: 'Nationalfeiertag', text: '28. Oktober' },
+  { title: 'Telefonvorwahl', text: '+420' }
 ])
 </script>
 
@@ -17,6 +21,7 @@ const generalInformation = ref([
     <template #heading>{{ sectionTitle }}</template>
     <article>
       <ul class="general-information__list">
+        <img alt="flag" src="@/assets/images/czech-republic-flag.png" />
         <li v-for="information in generalInformation" :key="information.title">
           <h3>{{ information.title }}:</h3>
           <p>{{ information.text }}</p>
@@ -29,7 +34,7 @@ const generalInformation = ref([
   </SectionPage>
 </template>
 
-<style lang="scss">
+<style lang="scss" scoped>
 article {
   display: flex;
   flex-direction: column;

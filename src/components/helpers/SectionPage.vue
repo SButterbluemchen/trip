@@ -12,7 +12,7 @@ import HopDivider from './helpers/HopDivider.vue'
   </section>
 </template>
 
-<style lang="scss">
+<style lang="scss" scoped>
 h2 {
   text-align: center;
 }

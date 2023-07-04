@@ -33,8 +33,9 @@ const props = defineProps({
 @import '@/assets/stylesheets/_variables.scss';
 
 .timeline-component {
-  display: flex;
-  flex-direction: column;
+  @media only screen and (min-width: 900px) {
+    width: 45%;
+  }
 }
 .customized-timeline {
   padding: 1rem;
@@ -59,6 +60,9 @@ h3 {
 .p-text-description {
   display: flex;
   flex-wrap: wrap;
-  width: 6rem;
+  @media only screen and (min-width: 900px) {
+    width: 8rem;
+  }
+  width: 5rem;
 }
 </style>
