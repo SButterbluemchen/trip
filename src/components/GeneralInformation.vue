@@ -8,7 +8,7 @@ const generalInformation = ref([
   { title: 'Land', text: 'Tschechien' },
   { title: 'Amtssprache', text: 'Tschechisch' },
   { title: 'Hauptstadt', text: 'Prag' },
-  { title: 'Währung', text: 'Tschechische Kronen (CZK)' },
+  { title: 'Währung', text: 'Tsche. Kronen (CZK)' },
   { title: 'Wechselkurs', text: '1 € - 23,70 CZK' },
   { title: 'Einwohnerzahl', text: '10,5 Millionen' },
   { title: 'Nationalfeiertag', text: '28. Oktober' },
@@ -20,7 +20,7 @@ const generalInformation = ref([
   <SectionPage>
     <template #heading>{{ sectionTitle }}</template>
     <article>
-      <ul class="general-information__list">
+      <ul>
         <img alt="flag" src="@/assets/images/czech-republic-flag.png" />
         <li v-for="information in generalInformation" :key="information.title">
           <h3>{{ information.title }}:</h3>
@@ -39,24 +39,24 @@ article {
   display: flex;
   flex-direction: column;
   gap: 1rem;
-  padding: 1rem;
+  padding: 0 1rem;
   @media only screen and (min-width: 900px) {
     flex-direction: row;
     justify-content: space-evenly;
     gap: 2rem;
   }
-  .general-information__list li {
+  li {
     list-style-type: none;
     display: flex;
     align-items: center;
     gap: 0.5rem;
+    width: 100%;
+    line-height: 2.25rem;
   }
 }
 figure {
-  width: 19rem;
-  @media only screen and (min-width: 900px) {
-    width: 35rem;
-  }
+  width: 100%;
+  flex-basis: 60%;
   img {
     width: 100%;
     height: 100%;
