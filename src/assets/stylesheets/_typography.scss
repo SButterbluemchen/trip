@@ -11,8 +11,10 @@ h2 {
   padding: 1.75rem 0.5rem;
   color: rgb(255, 204, 0);
   font-size: 1.75rem;
+  font-weight: 600;
   @media only screen and (min-width: 900px) {
-    font-size: 2rem;
+    font-size: 2.25rem;
+    padding: 2rem 0.5rem 2.5rem 0.5rem;
   }
   line-height: 2rem;
   text-align: center;

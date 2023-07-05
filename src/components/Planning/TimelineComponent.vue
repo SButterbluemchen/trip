@@ -36,15 +36,15 @@ const props = defineProps({
   @media only screen and (min-width: 900px) {
     width: 45%;
   }
+  padding: 1rem 0;
 }
 .customized-timeline {
   padding: 1rem;
 }
 h3 {
   text-align: center;
-  background: $yellow-color;
+  background: rgb(35, 35, 35);
   padding: 0.25rem;
-  text-shadow: 1px 1px 10px black;
 }
 .icon {
   padding: 0.5rem;
@@ -54,15 +54,19 @@ h3 {
   text-align: center;
 }
 .p-text-secondary {
-  color: white;
+  color: black;
 }
 
 .p-text-description {
   display: flex;
   flex-wrap: wrap;
+  color: black;
   @media only screen and (min-width: 900px) {
-    width: 8rem;
+    max-width: 10rem;
   }
-  width: 5rem;
+  @media only screen and (min-width: 1200px) {
+    max-width: 15rem;
+  }
+  max-width: 5rem;
 }
 </style>
