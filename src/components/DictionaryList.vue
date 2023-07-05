@@ -11,29 +11,36 @@ const images = [dictionary1, dictionary2, dictionary3, dictionary4]
 </script>
 
 <template>
-  <SectionPage>
-    <template #heading>{{ sectionTitle }}</template>
-    <article>
-      <img alt="dictionary-image" v-for="image in images" :key="image" :src="image" />
-    </article>
-  </SectionPage>
+  <section class="dictionary">
+    <SectionPage>
+      <template #heading>{{ sectionTitle }}</template>
+      <article>
+        <img alt="dictionary-image" v-for="image in images" :key="image" :src="image" />
+      </article>
+    </SectionPage>
+  </section>
 </template>
 
 <style lang="scss" scoped>
-article {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: flex-start;
-  gap: 1rem;
-  padding: 1rem;
-  @media only screen and (min-width: 900px) {
-    gap: 2rem;
-    justify-content: space-evenly;
-  }
-  img {
-    width: 100%;
+.dictionary {
+  background: white;
+  padding: 2rem 0;
+  margin: 0 -1rem -2rem -1rem;
+  article {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    gap: 1rem;
+    padding: 1rem;
     @media only screen and (min-width: 900px) {
-      width: 35%;
+      gap: 2rem;
+      justify-content: space-evenly;
+    }
+    img {
+      width: 100%;
+      @media only screen and (min-width: 900px) {
+        width: 35%;
+      }
     }
   }
 }

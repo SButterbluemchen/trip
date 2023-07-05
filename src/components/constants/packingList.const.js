@@ -24,7 +24,7 @@ export const valuables = [
   "Kreditkarte",
   "Geldbeute",
   "Bargeld",
-  "Personalausweis und/oder Reisepass",
+  "Personalausweis/Reisepass",
   "Führerschein",
   "Ladekabel",
   "Powerbank",
