@@ -1,8 +1,27 @@
 <script setup>
-// eslint-disable-next-line no-unused-vars
+import { onMounted, ref } from 'vue'
+
 const props = defineProps({
-  list: Array
+  list: Array,
+  heading: String
 })
+
+const currentList = ref([])
+
+onMounted(() => {
+  const storedList = localStorage.getItem(props.heading)
+
+  if (storedList) {
+    currentList.value = JSON.parse(storedList)
+  } else {
+    localStorage.setItem(props.heading, JSON.stringify(props.list))
+    currentList.value = props.list
+  }
+})
+
+const updateStorage = () => {
+  localStorage.setItem(props.heading, JSON.stringify(currentList.value))
+}
 </script>
 
 <template>
@@ -11,8 +30,9 @@ const props = defineProps({
       <slot name="paragraphHeading"></slot>
     </h3>
     <ul>
-      <li v-for="(item, index) in list" :key="index">
-        <p>{{ item }}</p>
+      <li v-for="item in currentList" :key="item.id">
+        <input type="checkbox" v-model="item.done" @change="updateStorage" />
+        <span>{{ item.text }}</span>
       </li>
     </ul>
   </div>
@@ -29,7 +49,13 @@ const props = defineProps({
     font-size: 1.25rem;
   }
   ul {
-    padding: 0 1rem;
+    padding: 0 0.25rem;
+    li {
+      list-style-type: none;
+      span {
+        padding-left: 0.5rem;
+      }
+    }
   }
 }
 </style>

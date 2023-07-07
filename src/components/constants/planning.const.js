@@ -148,8 +148,8 @@ export const thirdDayEvents = [
     status: 'Abendprogramm',
     time: '19 Uhr',
     icon: '',
-    secondaryIcon: PLANNING_CONST.BAR.ICON,
-    color: PLANNING_CONST.BAR.COLOR,
+    secondaryIcon: PLANNING_CONST.FOOD.ICON,
+    color: PLANNING_CONST.FOOD.COLOR,
   }
 ]
 

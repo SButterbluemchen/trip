@@ -9,8 +9,8 @@ const sectionTitle = 'Packliste'
 
 const packingLists = ref([
   { list: clothes, heading: 'Kleidung' },
-  { list: hygiene, heading: 'Hygiene' },
-  { list: valuables, heading: 'Unterlagen' }
+  { list: valuables, heading: 'Hygiene' },
+  { list: hygiene, heading: 'Unterlagen' }
 ])
 </script>
 
@@ -45,7 +45,7 @@ const packingLists = ref([
     gap: 1rem;
     padding: 1rem;
     margin: auto;
-    max-width: 95%;
+    max-width: 90%;
     @media only screen and (min-width: 900px) {
       justify-content: space-evenly;
       gap: 2rem;
