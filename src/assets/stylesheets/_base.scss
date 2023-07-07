@@ -28,9 +28,11 @@ ul {
 // PRIMEVUE OVERWRITES
 .p-datatable .p-datatable-thead > tr > th {
   background: $yellow-color;
+  color: #1f1f1f;
 }
 .column {
   width: 50%;
+  color: #1f1f1f;
 }
 .p-column-title {
   font-weight: 500;

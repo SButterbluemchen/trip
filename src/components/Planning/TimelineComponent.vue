@@ -54,13 +54,13 @@ h3 {
   text-align: center;
 }
 .p-text-secondary {
-  color: black;
+  color: #1f1f1f;
 }
 
 .p-text-description {
   display: flex;
   flex-wrap: wrap;
-  color: black;
+  color: #1f1f1f;
   @media only screen and (min-width: 900px) {
     max-width: 10rem;
   }
