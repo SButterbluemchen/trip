@@ -1,14 +1,25 @@
 <script setup>
+import { ref } from 'vue'
 import GeneralInformation from './components/GeneralInformation.vue'
 import PageTitle from './components/PageTitle.vue'
 import PlanningOverview from './components/Planning/PlanningOverview.vue'
 import DictionaryList from './components/DictionaryList.vue'
 import PackingList from './components/packingList/PackingList.vue'
+import WeatherApp from './components/WeatherApp.vue'
+import WeatherButton from './components/WeatherButton.vue'
+
+const showWeatherComponent = ref()
 </script>
 
 <template>
+  <div v-if="showWeatherComponent">
+    <WeatherApp />
+  </div>
   <header>
     <PageTitle />
+    <WeatherButton
+      @state="(showComponentFromChild) => (showWeatherComponent = showComponentFromChild)"
+    />
   </header>
   <main>
     <GeneralInformation />
@@ -26,6 +37,7 @@ header {
   line-height: 1.5;
   display: flex;
   justify-content: center;
+  position: relative;
 }
 footer {
   text-align: center;
